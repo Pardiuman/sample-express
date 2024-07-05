@@ -1,0 +1,15 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 14
+
+  build:
+    commands:
+    - npm install
+    - zip -r express.zip package.json node_modules/ index.js
+
+artifacts:
+  files:
+  - express.zip
